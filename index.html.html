@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        button{
+            background-color: blue;
+            color: white;
+            border-radius: 20px;
+        }
+        .ShowQuantity{
+            background-color: black;
+            color: yellow;
+            margin-bottom: 10px;
+            margin-right: 1100px;
+
+        }
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart quantity</title>
+</head>
+<body>
+    <button onclick=" cartQuantity = cartQuantity
+       
+        if(cartQuantity===0){
+            
+        }
+        if(cartQuantity===1 || cartQuantity===0){
+            document.querySelector('.ShowQuantity').innerHTML=`${cartQuantity} QUANTITY ADDED TO CART`
+
+        }
+        else if(cartQuantity>1){
+            document.querySelector('.ShowQuantity').innerHTML=`${cartQuantity} QUANTITIES ADDED TO CART`
+        }
+        ">
+        Show quantity
+    </button>
+    <h4 class="NumberOfQuantity"> </h4>
+    <div class="ShowQuantity"></div>
+    
+    
+    <button onclick="cartQuantity += 1 
+    NumberOfQuantity()
+   ">
+    
+        Add to cart
+    </button>
+
+    <button onclick="cartQuantity += 2
+    NumberOfQuantity()
+    ">
+        +2
+    </button>
+
+    <button onclick="cartQuantity += 3
+    NumberOfQuantity()
+    ">
+        +3
+    </button>
+
+    <button onclick="cartQuantity = 0
+    alert('Cart Quantity successfully reseted')
+    NumberOfQuantity()
+    document.querySelector('.ShowQuantity').innerHTML=`0 QUANTITIES ADDED TO CART`
+    ">
+        Reset cart
+    </button>
+
+
+
+    <script>
+        const QuantityPrice = 10;
+        let cartQuantity = 0;
+        function NumberOfQuantity(){
+            document.querySelector('.NumberOfQuantity').innerHTML=`Number Of Items In Cart :${cartQuantity}`;
+        }
+
+
+    </script>
+</body>
+</html>
